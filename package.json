@@ -1,0 +1,16 @@
+{
+  "name": "newbot",
+  "version": "1.0.0",
+  "description": "A new bot I made",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "author": "meesam4687",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/rest": "^1.1.0",
+    "discord.js": "^14.3.0",
+    "dotenv": "^16.0.2"
+  }
+}
