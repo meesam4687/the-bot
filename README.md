@@ -1,4 +1,4 @@
-# The Bot
+# The Bot[WIP]
 I created The Bot because I was bored.<br>
 It can do random stuff.
 # How to self-host
