@@ -39,7 +39,7 @@ for (const file of commandFiles) {
 	cmds.push(command.data)
 }
 
-rest.put(Discord.Routes.applicationGuildCommands('1020641311176532028','956585752668569701'), { body: cmds })
+rest.put(Discord.Routes.applicationCommands(process.env.CLIENT_ID), { body: cmds })
 	.then((data) => console.log(`Successfully registered ${data.length} commands.`))
 	.catch(console.error);
 
