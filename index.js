@@ -11,7 +11,8 @@ const client = new Discord.Client({
     intents: [
         Discord.GatewayIntentBits.Guilds,
 		Discord.GatewayIntentBits.GuildVoiceStates
-    ]
+    ],
+	ws: { properties: { $browser: "Discord iOS" }}
 });
 client.distube = new DisTube(client, {
 	leaveOnStop: true,
