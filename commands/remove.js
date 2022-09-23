@@ -9,7 +9,7 @@ module.exports = {
         let opt = interaction.options.getInteger('int');
         const queue = interaction.client.distube.getQueue(interaction)
         if (!queue) return interaction.reply({content: `Nothing is Being Played`, ephemeral: true}).catch(console.error)
-        if(queue.length<opt) return interaction.reply("Was quite funny that you tried to do that");
+        if(queue.length < opt) return interaction.reply("Was quite funny that you tried to do that");
         let removed = queue.songs.splice(opt, opt);
         interaction.reply(`Removed from the queue`).catch(console.error)
     },
