@@ -16,7 +16,6 @@
     "distube": "^4.0.3",
     "dotenv": "^16.0.2",
     "fetch-blob": "^3.1.5",
-    "ffmpeg-static": "^4.4.1",
     "formdata-polyfill": "^4.0.10",
     "libsodium-wrappers": "^0.7.10",
     "node-domexception": "^1.0.0",
