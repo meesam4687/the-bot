@@ -13,7 +13,6 @@ module.exports = {
     if(!queue) return interaction.reply({content: "Nothing playing lol.", ephemeral: true})
     const song = queue.songs[0]
     const playEmbed = new Discord.EmbedBuilder()
-	    .setColor('RANDOM')
 	    .setTitle(`Now Playing ${song.name} 🎶`)
       .setDescription(`⌚ Song Duration: \`${song.formattedDuration}\``)
 	    .setImage(song.thumbnail)
