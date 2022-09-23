@@ -11,7 +11,7 @@ module.exports = {
         if (!queue) return interaction.reply('Nothing Playing.')
         let song = queue.songs[0]
         let currentdur = new Date()
-        let secs = ((currentdur - client.distube.startduration) / 1000)
+        let secs = ((currentdur - interaction.client.distube.startduration) / 1000)
         let bar = progressbar.splitBar(song.duration, secs, [13])[0];
         let total = song.formattedDuration;
         let remaining = `${convert(Math.round(song.duration - secs)).minutes}:${convert(Math.round(song.duration - secs)).seconds}`
@@ -21,6 +21,6 @@ module.exports = {
           .setThumbnail(song.thumbnail)
           .setDescription(`\n\`${remaining}\` ${bar} \`${total}\``)
           .setTimestamp()
-        message.channel.send({ embeds: [npEmbed] });
+        interaction.reply({ embeds: [npEmbed] });
 	},
 };
