@@ -15,6 +15,6 @@ module.exports = {
             textChannel: interaction.channel,
             interaction
         })
-        interaction.reply({content: "Now Playing"})
+        interaction.reply({content: "Added"})
     },
 };
