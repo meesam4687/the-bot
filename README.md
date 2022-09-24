@@ -7,9 +7,10 @@ First run this command
 ```sh
 npm install
 ```
-Then create a file called ```.env``` and enter the following (replace your_token with your bots token)
+Then create a file called ```.env``` and enter the following (replace your_token with your bots token and your_id with your bots id)
 ```env
 TOKEN=your_token
+CLIENT_ID=your_id
 ```
 Now run 
 ```sh
