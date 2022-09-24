@@ -5,7 +5,7 @@ module.exports = {
 		.setName('stop')
 		.setDescription('Stop any music thats playing'),
 	async execute(interaction) {
-        let queue = client.distube.getQueue(interaction)
+        let queue = interaction.client.distube.getQueue(interaction)
 		if(!interaction.member.voice.channel) return interaction.reply({content: "Join a VC First", ephemeral: true})
         if(!queue) return interaction.reply("Nothing playing")
         interaction.client.distube.stop(interaction)
