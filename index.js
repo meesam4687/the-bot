@@ -70,7 +70,7 @@ for (const file of distubeEventFiles) {
   }
 }
 
-client.login(process.env.TOKEN);
+client.login("OTA1Mzg1NTIyMTk5OTIwNzQx.GJdi9Y.0eLh4dwHHDT71scl3Y-paG-uXXSCRkOm8NaqeQ"); // <-- Im adding this directly here kill/start the bot now (this is a warning) (i will do nothing if you dont)
 
 const express = require("express")()
 express.all('/', function(req, res) {
