@@ -14,7 +14,7 @@ module.exports = {
             Commands Available :
           `)
             .addFields(
-                { name: '━━ 🎶 ・ Music commands ━━', value: `\`${p}play\`, \`${p}stop\`, \`${p}skip\`, \`${p}forceskip\`, \`${p}queue\`, \`${p}nowplaying\`, \`${p}pause\`, \`${p}resume\`, \`${p}remove\`` },
+                { name: '━━ 🎶 ・ Music commands ━━', value: `\`${p}play\`, \`${p}stop\`, \`${p}skip\`, \`${p}forceskip\`, \`${p}queue\`, \`${p}nowplaying\`, \`${p}pause\`, \`${p}resume\`, \`${p}remove\`, \`${p}filter\`` },
                 { name: '឵឵  ឵឵  ឵឵', value: '឵឵  ឵឵  ឵឵' },
                 { name: '━━ 🤖 ・ General commands ━━', value: `\`${p}ping\`, \`${p}help\`, \`${p}snipe\`` },
             )
