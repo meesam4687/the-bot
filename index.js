@@ -29,18 +29,36 @@ client.distube = new DisTube(client, {
   ]
 })
 client.commands = new Discord.Collection();
-const commandsPath = path.join(__dirname, 'commands');
-const commandFiles = fs.readdirSync(commandsPath).filter(file => file.endsWith('.js'));
-
-const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 const cmds = []
-for (const file of commandFiles) {
-  const filePath = path.join(commandsPath, file);
+
+const musicCommandsPath = path.join(__dirname, 'commands/music');
+const musicCommandFiles = fs.readdirSync(musicCommandsPath).filter(file => file.endsWith('.js'));
+for (const file of musicCommandFiles) {
+  const filePath = path.join(musicCommandsPath, file);
   const command = require(filePath);
   client.commands.set(command.data.name, command);
   cmds.push(command.data)
 }
 
+const generalCommandsPath = path.join(__dirname, 'commands/general');
+const generalCommandFiles = fs.readdirSync(generalCommandsPath).filter(file => file.endsWith('.js'));
+for (const file of generalCommandFiles) {
+  const filePath = path.join(generalCommandsPath, file);
+  const command = require(filePath);
+  client.commands.set(command.data.name, command);
+  cmds.push(command.data)
+}
+
+const funCommandsPath = path.join(__dirname, 'commands/fun');
+const funCommandFiles = fs.readdirSync(funCommandsPath).filter(file => file.endsWith('.js'));
+for (const file of funCommandFiles) {
+  const filePath = path.join(funCommandsPath, file);
+  const command = require(filePath);
+  client.commands.set(command.data.name, command);
+  cmds.push(command.data)
+}
+
+const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 rest.put(Discord.Routes.applicationCommands(process.env.CLIENT_ID), { body: cmds })
   .then((data) => console.log(`Successfully registered ${data.length} commands.`))
   .catch(console.error);
